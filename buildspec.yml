@@ -16,4 +16,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - build/libs/city-service-1.0-SNAPSHOT.jar
+    - build/libs/*
+  discard-paths: yes
