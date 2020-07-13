@@ -2,8 +2,6 @@ package com.akaws.connect.controller;
 
 import com.akaws.connect.model.City;
 import com.akaws.connect.repository.CityRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +14,6 @@ import java.util.List;
 
 @RestController
 public class ConnectController {
-
-    private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private CityRepository repository;
@@ -57,7 +53,7 @@ public class ConnectController {
      * connected cities
      * @return
      */
-    @GetMapping("/listOfCities")
+    @GetMapping("/cities")
     @ResponseBody
     public List<City> listOfCities() {
         return repository.findAll();
